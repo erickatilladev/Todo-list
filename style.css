@@ -1,0 +1,79 @@
+* {
+    margin: 0; /* Remove as margens padrões de todos os elementos */
+    padding: 0; /* Remove o preenchimento (padding) padrão de todos os elementos */
+    box-sizing: border-box; /* Define que o padding e a borda sejam incluídos nas dimensões do elemento */
+}
+
+body {
+    background: url(./img/background.png); /* Define uma imagem de fundo para o corpo da página */
+}
+
+.container {
+    background-color: #d1d1d1; /* Cor de fundo da área de conteúdo principal */
+    width: 500px; /* Largura do contêiner */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Preenchimento interno de 20px */
+    margin: 100px auto 0; /* Espaçamento superior de 100px, centraliza o contêiner horizontalmente */
+}
+
+.input-task {
+    border: none; /* Remove a borda padrão do input */
+    border-radius: 5px; /* Borda arredondada para o input */
+    width: 300px; /* Largura do campo de input */
+    height: 40px; /* Altura do campo de input */
+    padding-left: 10px; /* Preenchimento à esquerda dentro do input */
+}
+
+.button-add-task {
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Borda arredondada para o botão */
+    height: 40px; /* Altura do botão */
+    background-color: #003329; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto no botão */
+    font-size: 17px; /* Tamanho da fonte do texto no botão */
+    padding: 0 15px; /* Preenchimento interno do botão (15px à direita e à esquerda) */
+    float: right; /* Faz o botão flutuar para a direita */
+    cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre o botão */
+}
+
+.button-add-task:hover {
+    opacity: 0.8; /* Altera a opacidade do botão para 0.8 quando o mouse passa por cima (efeito de hover) */
+}
+
+.button-add-task:active {
+    opacity: 0.6; /* Altera a opacidade do botão para 0.6 quando ele é pressionado (efeito ativo) */
+}
+
+.list-tasks {
+    width: 100%; /* A lista ocupa 100% da largura disponível */
+    list-style: none; /* Remove os pontos (bullets) da lista */
+    margin-top: 30px; /* Espaçamento superior de 30px para separar a lista da parte de cima */
+}
+
+.task {
+    background-color: #f2f2f2; /* Cor de fundo das tarefas */
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0); /* Sombra da tarefa (a sombra está invisível, mas pode ser ajustada) */
+    height: 50px; /* Altura de cada item de tarefa */
+    display: flex; /* Usa flexbox para layout */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: space-between; /* Espaça os itens entre as extremidades */
+    padding: 0 11px; /* Preenchimento à esquerda e à direita dentro da tarefa */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-bottom: 20px; /* Espaçamento inferior entre as tarefas */
+    cursor: pointer; /* Altera o cursor para uma mãozinha ao passar sobre a tarefa */
+}
+
+img {
+    height: 25px; /* Define a altura da imagem dentro da tarefa */
+    opacity: 0; /* Inicialmente, a imagem é invisível */
+    transition: opacity 0.5s ease-in-out; /* Define uma transição suave de 0.5 segundos para a opacidade */
+}
+
+.task:hover img {
+    opacity: 1; /* Torna a imagem visível ao passar o mouse sobre a tarefa */
+}
+
+.done {
+    background-color: #8fac55; /* Cor de fundo para tarefas concluídas */
+    text-decoration: line-through; /* Aplica o risco no texto de tarefas concluídas */
+}
